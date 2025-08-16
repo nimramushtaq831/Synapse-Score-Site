@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+
+     <style>
+      .role-section {
+        width: 100%;
+        background-color: #f6f6f6;
+      }
+
+      h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 36px;
+        color: black;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        max-width: 567px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #525252;
+        margin-bottom: 20px;
+      }
+
+      .role-container {
+        display: flex;
+        gap: 50px;
+        padding: 90px 5%;
+        align-items: center;   /* ✅ vertical alignment */
+        flex-wrap: wrap;
+        justify-content: center; /* ✅ centers layout */
+        text-align: center;     /* ✅ centers text inside */
+      }
+
+      .roles-list {
+        flex: 1;
+        min-width: 280px;
+        text-align: left; /* keep menu aligned left */
+      }
+
+      .roles-list ul {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #525252;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .roles-list li {
+        padding: 20px 0;
+        border-bottom: 1px solid #939393;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .roles-list li span {
+        font-size: 25px;
+        font-weight: bolder;
+      }
+
+      .roles-list li:hover,
+      .roles-list li.active {
+        color: #0070c0;
+        font-weight: bold;
+      }
+
+      .role-content {
+        flex: 1.5;
+        background: #e2e2e2;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-width: 600px;
+        text-align: center; 
+      }
+
+      .role-content img {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+      }
+
+      .role-content ul {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #525252;
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        text-align: left; /* ✅ keep bullets aligned left */
+        display: inline-block; /* ✅ centers list block */
+      }
+
+      .learn-more {
+        text-decoration: none;
+        color: #0070c0;
+        font-weight: bold;
+        display: flex;
+        padding-left: 90px;
+        margin-top: 10px;
+      }
+
+      /* Responsive Adjustment */
+      @media (max-width: 992px) {
+        .role-container {
+          flex-direction: column;
+          padding: 60px 8%;
+          gap: 30px;
+          text-align: center;
+        }
+
+        .roles-list {
+          width: 100%;
+          text-align: center;
+        }
+
+        .roles-list ul {
+          display: inline-block;
+          text-align: left;
+        }
+
+        .role-content {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 22px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+          max-width: 100%;
+        }
+
+        .roles-list li {
+          font-size: 14px;
+          padding: 15px 0;
+        }
+
+        .role-content {
+          padding: 20px;
+        }
+
+        .role-content img {
+          max-width: 180px;
+        }
+
+        .role-content ul li {
+          font-size: 14px;
+        }
+      }
+    </style>
+    <title>Career</title>
+  </head>
+  <body>
+    <section class="role-section">
+      <div class="role-container">
+        <div class="roles-list">
+          <h2>What This Means for You</h2>
+          <p class="subtitle">
+            Forward-looking skill intelligence transforms decisions across every
+            role. Our recommendations adapt to your specific context—whether
+            you're building organizational capabilities or planning your career.
+          </p>
+          <ul id="roleMenu">
+            <li > HR & Talent Leaders</li>
+            <li > L&D and Capability Teams</li>
+            <li >Workforce Planners and Executives</li>
+            <li > Academics & Curriculum Designers</li>
+            <li class="active"><span>→</span>  Professionals & Career Builders</li>
+            <li >Students & Early Career Talent</li>
+          </ul>
+        </div>
+        <div id="roleContent" class="role-content">
+          <img
+            src="assets/career.png"
+            alt="HR Leader"
+          />
+          <ul>
+            <li>Build talent pipelines for what’s next—not what’s trending</li>
+            <li>
+              Benchmark internal capabilities against forward-looking skill maps
+            </li>
+          </ul>
+          <a href="#" class="learn-more">Learn more →</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

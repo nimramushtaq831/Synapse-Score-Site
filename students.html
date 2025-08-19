@@ -3,9 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       .role-section {
         width: 100%;
+        height: 100vh;
         background-color: #f6f6f6;
       }
 
@@ -30,10 +49,10 @@
         display: flex;
         gap: 50px;
         padding: 90px 5%;
-        align-items: center;   /* ✅ vertical alignment */
+        align-items: center; /* ✅ vertical alignment */
         flex-wrap: wrap;
         justify-content: center; /* ✅ centers layout */
-        text-align: center;     /* ✅ centers text inside */
+        text-align: center; /* ✅ centers text inside */
       }
 
       .roles-list {
@@ -183,7 +202,9 @@
             <li>Workforce Planners and Executives</li>
             <li>Academics & Curriculum Designers</li>
             <li>Professionals & Career Builders</li>
-            <li class="active"><span>→</span> Students & Early Career Talent</li>
+            <li class="active">
+              <span>→</span> Students & Early Career Talent
+            </li>
           </ul>
         </div>
 
@@ -192,7 +213,9 @@
           <img src="assets/student.png" alt="Student" />
           <ul>
             <li>Build talent pipelines for what’s next—not what’s trending</li>
-            <li>Benchmark internal capabilities against forward-looking skill maps</li>
+            <li>
+              Benchmark internal capabilities against forward-looking skill maps
+            </li>
           </ul>
           <a href="#" class="learn-more">Learn more →</a>
         </div>

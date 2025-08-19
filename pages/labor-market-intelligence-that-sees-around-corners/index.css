@@ -1,0 +1,854 @@
+/* ====================================================
+   SYNAPSESCOPE - SIMPLIFIED CSS WITH ROBOTO FONT
+   ====================================================*/
+
+/* Import Roboto Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+/* ROOT VARIABLES */
+:root {
+    --primary-blue: #0066cc;
+    --light-blue: #e6f3ff;
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --success-green: #28a745;
+    --danger-red: #dc3545;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: 'Roboto', -webkit-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(135deg, #e6f3ff, #b3d9ff);
+    color: var(--text-dark);
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.hero-cta {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+}
+
+/* SECTION SPACING */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* TRADITIONAL SECTION - Updated to match image */
+.traditional-section {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+/* Problem Cards - Three cards layout */
+.problem-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.problem-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.problem-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.problem-card:hover .problem-card-image img {
+    transform: scale(1.05);
+}
+
+.problem-card-content {
+    padding: 25px;
+}
+
+.problem-card-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* COMPARISON SECTION - Redesigned to match exact image specifications */
+.comparison-section {
+    background: var(--white);
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Main heading styles - matching the image typography */
+.comparison-header {
+    margin-bottom: 60px;
+}
+
+.comparison-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    color: var(--text-dark);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Container for both comparison cards */
+.comparison-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base styles for both comparison cards */
+.comparison-card {
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+/* Subtle hover effect for both cards */
+.comparison-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Card titles - consistent styling for both */
+.card-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* TRADITIONAL CARD - Exact match to provided image */
+.traditional-card {
+    background: #F6F6F6; /* Exact color as specified */
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.traditional-card .card-title {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Traditional point containers - light colored bars as shown in image */
+.traditional-point-container {
+    background: rgba(255, 255, 255, 0.7); /* Light white/gray containers */
+    border-radius: 12px;
+    padding: 0px 20px;
+    min-height: 60px;
+    align-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.traditional-point-container:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.traditional-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-dark);
+}
+
+/* Highlight for "hot skill" text */
+.traditional-text .highlight {
+    font-weight: 600;
+    /* color removed - will use default text color */
+}
+
+/* SYNAPSESCOPE CARD - Exact match to provided image */
+.synapsescope-card {
+    background: #D3E9FF; /* Exact color as specified */
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.synapsescope-card .card-title {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* SynapseScope point containers - white pill containers as shown in image */
+.synapsescope-point-container {
+    background: var(--white);
+    min-height: 60px;
+    border-radius: 16px; /* Slightly less rounded than before to match image */
+    padding: 0px 20px;
+    align-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.synapsescope-point-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.synapsescope-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-dark);
+}
+
+/* RESPONSIVE DESIGN - Mobile-First Approach */
+
+/* Large tablets and small desktops (992px to 1199px) */
+@media (max-width: 1199.98px) {
+    .comparison-title {
+        font-size: 2.4rem;
+    }
+    
+    .comparison-card {
+        padding: 35px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991.98px) {
+    .comparison-section {
+        padding: 70px 0;
+    }
+    
+    .comparison-header {
+        margin-bottom: 50px;
+    }
+    
+    .comparison-title {
+        font-size: 2.1rem;
+        line-height: 1.3;
+    }
+    
+    .comparison-card {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+    
+    .card-content {
+        gap: 14px;
+    }
+    
+    .synapsescope-point {
+        padding: 14px 20px;
+    }
+}
+
+/* Large phones in landscape and small tablets (576px to 767px) */
+@media (max-width: 767.98px) {
+    .comparison-section {
+        padding: 60px 0;
+    }
+    
+    .comparison-header {
+        margin-bottom: 40px;
+    }
+    
+    .comparison-title {
+        font-size: 1.9rem;
+        line-height: 1.4;
+        padding: 0 15px;
+    }
+    
+    .comparison-card {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .traditional-point-container,
+    .synapsescope-point-container {
+        padding: 7px 18px;
+    }
+    
+    .traditional-text,
+    .synapsescope-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small phones (up to 575px) */
+@media (max-width: 575.98px) {
+    .comparison-section {
+        padding: 50px 0;
+    }
+    
+    .comparison-header {
+        margin-bottom: 35px;
+    }
+    
+    .comparison-title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+    
+    .comparison-wrapper {
+        padding: 0 10px;
+    }
+    
+    .comparison-card {
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+        line-height: 1.3;
+    }
+    
+    .card-content {
+        gap: 12px;
+    }
+    
+    .traditional-point-container,
+    .synapsescope-point-container {
+        padding: 12px 16px;
+        border-radius: 10px;
+    }
+    
+    .traditional-text,
+    .synapsescope-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Remove hover effects on touch devices for better mobile UX */
+    .synapsescope-point-container:hover,
+    .traditional-point-container:hover {
+        transform: none;
+    }
+    
+    .comparison-card:hover {
+        transform: none;
+    }
+}
+
+/* Extra small phones (up to 375px) */
+@media (max-width: 374.98px) {
+    .comparison-title {
+        font-size: 1.4rem;
+    }
+    
+    .comparison-card {
+        padding: 16px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .traditional-point-container,
+    .synapsescope-point-container {
+        padding: 10px 14px;
+    }
+    
+    .traditional-text,
+    .synapsescope-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* FRAMEWORK SECTION */
+.framework-section {
+    background: var(--light-blue);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.framework-diagram {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    height: 400px;
+}
+
+.framework-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.framework-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.center-circle {
+    width: 150px;
+    height: 150px;
+    background: var(--primary-blue);
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+
+/* PERSONAS SECTION */
+.personas-section {
+    background: var(--light-gray);
+    padding: 80px 0;
+}
+
+.persona-nav {
+    border-left: 3px solid var(--border-light);
+    padding-left: 0;
+}
+
+.persona-item {
+    padding: 15px 25px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    margin-left: -3px;
+    color: var(--text-muted);
+    font-weight: 500;
+    position: relative;
+}
+
+.persona-item:hover {
+    background: rgba(0, 102, 204, 0.05);
+    color: var(--primary-blue);
+    border-left-color: var(--primary-blue);
+}
+
+.persona-item.active {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary-blue);
+    border-left-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.persona-item.active i {
+    color: var(--primary-blue);
+}
+
+.persona-item i {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.persona-item.active i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.persona-visual {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.persona-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.persona-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dashboard-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+.dashboard-overlay.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dashboard-overlay h6 {
+    color: var(--primary-blue);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-overlay .metric {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.dashboard-overlay .description {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.persona-benefits {
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.persona-benefits.changing {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.persona-benefits ul li {
+    padding: 8px 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.persona-benefits ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* STEP CARDS */
+.step-card {
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .step-icon {
+    transform: scale(1.1);
+}
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* ANIMATIONS */
+.animated-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.animated-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXT UTILITIES */
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .section-padding,
+    .traditional-section,
+    .comparison-section,
+    .framework-section,
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .insights-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .comparison-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .framework-diagram {
+        height: 300px;
+    }
+    
+    .framework-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+    }
+    
+    .center-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
+    }
+    
+    .step-card,
+    .comparison-card,
+    .insight-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .insights-cards {
+        gap: 15px;
+    }
+    
+    .insight-card-image {
+        height: 150px;
+    }
+    
+    .insight-card-content {
+        padding: 20px;
+    }
+    
+    .comparison-card {
+        padding: 20px;
+    }
+    
+    .framework-diagram {
+        height: 250px;
+    }
+    
+    .framework-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 10px;
+    }
+    
+    .center-circle {
+        width: 90px;
+        height: 90px;
+        font-size: 12px;
+    }
+}
+
+/* FOCUS STATES FOR ACCESSIBILITY */
+.btn:focus,
+*:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* SELECTION STYLES */
+::selection {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}

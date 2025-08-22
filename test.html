@@ -3,559 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Lifecycle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 40px;
-        }
-
-        .lifecycle {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            margin: 60px 0;
-        }
-
-        /* Pin Container */
-        .pin-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            margin-bottom: 0;
-        }
-
-        .pin {
-            text-align: center;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .pin-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
-        .pin-head {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            margin: 0 auto;
-        }
-
-        .pin-content {
-            background: white;
-            border-radius: 50px;
-            padding: 10px 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .pin-icon {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .pin-text {
-            font-size: 14px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .pin-tail {
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -23px;
-        }
-
-        /* Colors */
-        .invest .pin-head { background-color: #007A9F; }
-        .invest .pin-tail { border-top: 30px solid #007A9F; }
-
-        .maintain .pin-head { background-color: #547E8B; }
-        .maintain .pin-tail { border-top: 30px solid #547E8B; }
-
-        .monitor .pin-head { background-color: #676F84; }
-        .monitor .pin-tail { border-top: 30px solid #676F84; }
-
-        .migrate .pin-head { background-color: #324559; }
-        .migrate .pin-tail { border-top: 30px solid #324559; }
-
-        .obsolete .pin-head { background-color: #7D7E81; }
-        .obsolete .pin-tail { border-top: 30px solid #7D7E81; }
-
-        /* Dot Container */
-        .dot-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 80px;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .connecting-line {
-            position: absolute;
-            top: 50%;
-            left: 89px;
-            right: 89px;
-            height: 3px;
-            background: transparent;
-            border-top: 3px dotted #bbb;
-            z-index: 1;
-        }
-
-        .dot {
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            z-index: 2;
-            position: relative;
-        }
-
-        .dot.invest { background-color: #007A9F; }
-        .dot.maintain { background-color: #547E8B; }
-        .dot.monitor { background-color: #676F84; }
-        .dot.migrate { background-color: #324559; }
-        .dot.obsolete { background-color: #7D7E81; }
-
-        /* Text Container */
-        .text-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .text-info {
-            text-align: center;
-            max-width: 160px;
-        }
-
-        .text-title {
-            font-weight: bold;
-            color: #333;
-            margin: 0 0 5px 0;
-            font-size: 16px;
-        }
-
-        .text-desc {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.3;
-        }
-
-        .details {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border-left: 4px solid #3498db;
-            display: none;
-        }
-
-        .details.show {
-            display: block;
-        }
-
-        .details h3 {
-            color: #333;
-            margin: 0 0 15px 0;
-        }
-
-        .details p {
-            color: #555;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .pin:hover .pin-head {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .pin .text-info {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
-            }
-
-            .lifecycle {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-
-            .pin-container {
-                width: 100%;
-                justify-content: space-between;
-                margin-bottom: 0;
-            }
-
-            .dot-container {
-                display: none;
-            }
-
-            .text-container {
-                display: none;
-            }
-
-            .pin {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                flex: 1;
-                max-width: 18%;
-            }
-
-            .pin .text-info {
-                display: block;
-                text-align: center;
-                margin-top: 0;
-                padding-top: 10px;
-            }
-
-            .pin-wrapper {
-                position: relative;
-                margin-bottom: 10px;
-            }
-
-            .pin-head {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 0;
-            }
-
-            .pin-content {
-                padding: 6px 10px;
-            }
-
-            .pin-icon {
-                font-size: 16px;
-            }
-
-            .pin-text {
-                font-size: 10px;
-            }
-
-            .pin-tail {
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -18px;
-                margin: 0;
-            }
-
-            .invest .pin-tail { border-top: 20px solid #007A9F; }
-            .maintain .pin-tail { border-top: 20px solid #547E8B; }
-            .monitor .pin-tail { border-top: 20px solid #676F84; }
-            .migrate .pin-tail { border-top: 20px solid #324559; }
-            .obsolete .pin-tail { border-top: 20px solid #7D7E81; }
-
-            .pin .text-title {
-                font-size: 12px;
-                margin-bottom: 3px;
-            }
-
-            .pin .text-desc {
-                font-size: 10px;
-                line-height: 1.2;
-                max-width: 100px;
-            }
-
-            .details {
-                padding: 20px;
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 15px;
-                margin: 10px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .lifecycle {
-                flex-direction: column;
-                gap: 40px;
-                align-items: center;
-            }
-
-            .pin-container {
-                flex-direction: column;
-                gap: 40px;
-                align-items: center;
-            }
-
-            .pin {
-                max-width: 200px;
-                width: 100%;
-            }
-
-            .pin-wrapper {
-                margin-bottom: 15px;
-            }
-
-            .pin-head {
-                width: 100px;
-                height: 100px;
-            }
-
-            .pin-content {
-                padding: 8px 12px;
-            }
-
-            .pin-icon {
-                font-size: 20px;
-            }
-
-            .pin-text {
-                font-size: 12px;
-            }
-
-            .pin-tail {
-                bottom: -23px;
-                border-left: 12px solid transparent;
-                border-right: 12px solid transparent;
-            }
-
-            .invest .pin-tail { border-top: 25px solid #007A9F; }
-            .maintain .pin-tail { border-top: 25px solid #547E8B; }
-            .monitor .pin-tail { border-top: 25px solid #676F84; }
-            .migrate .pin-tail { border-top: 25px solid #324559; }
-            .obsolete .pin-tail { border-top: 25px solid #7D7E81; }
-
-            .pin .text-info {
-                display: block;
-                margin-top: 0;
-                padding-top: 15px;
-            }
-
-            .pin .text-title {
-                font-size: 14px;
-            }
-
-            .pin .text-desc {
-                font-size: 12px;
-                max-width: 180px;
-            }
-        }
-    </style>
+    <title>Technology Lifecycle Component</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Technology Lifecycle</h1>
-        
-        <div class="lifecycle">
-            <!-- Pin Container -->
-            <div class="pin-container">
-                <div class="pin invest" onclick="showDetails('invest')">
-                    <div class="pin-wrapper">
-                        <div class="pin-head">
-                            <div class="pin-content">
-                                <div class="pin-icon">📈</div>
-                                <div class="pin-text">Invest</div>
-                            </div>
-                        </div>
-                        <div class="pin-tail"></div>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-title">Build aggressively</div>
-                        <div class="text-desc">Establish Centers of Excellence, strategic hiring</div>
-                    </div>
-                </div>
-
-                <div class="pin maintain" onclick="showDetails('maintain')">
-                    <div class="pin-wrapper">
-                        <div class="pin-head">
-                            <div class="pin-content">
-                                <div class="pin-icon">⚙️</div>
-                                <div class="pin-text">Maintain</div>
-                            </div>
-                        </div>
-                        <div class="pin-tail"></div>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-title">Support strategically</div>
-                        <div class="text-desc">Continue current initiatives, selective hiring</div>
-                    </div>
-                </div>
-
-                <div class="pin monitor" onclick="showDetails('monitor')">
-                    <div class="pin-wrapper">
-                        <div class="pin-head">
-                            <div class="pin-content">
-                                <div class="pin-icon">📊</div>
-                                <div class="pin-text">Monitor</div>
-                            </div>
-                        </div>
-                        <div class="pin-tail"></div>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-title">Watch carefully</div>
-                        <div class="text-desc">Small-scale pilots, monitor competitors, prepare transition</div>
-                    </div>
-                </div>
-
-                <div class="pin migrate" onclick="showDetails('migrate')">
-                    <div class="pin-wrapper">
-                        <div class="pin-head">
-                            <div class="pin-content">
-                                <div class="pin-icon">☁️</div>
-                                <div class="pin-text">Migrate</div>
-                            </div>
-                        </div>
-                        <div class="pin-tail"></div>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-title">Actively phase out</div>
-                        <div class="text-desc">Stop new investments, reskill staff within 12-18 months</div>
-                    </div>
-                </div>
-
-                <div class="pin obsolete" onclick="showDetails('obsolete')">
-                    <div class="pin-wrapper">
-                        <div class="pin-head">
-                            <div class="pin-content">
-                                <div class="pin-icon">🗑️</div>
-                                <div class="pin-text">Obsolete</div>
-                            </div>
-                        </div>
-                        <div class="pin-tail"></div>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-title">Exit immediately</div>
-                        <div class="text-desc">Sunset programs, reallocate resources quickly</div>
-                    </div>
-                </div>
+    <!-- Demo Usage -->
+    <div class="container-fluid py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Technology Lifecycle Component -->
+                <div id="technology-lifecycle"></div>
             </div>
-
-            <!-- Dot Container -->
-            <div class="dot-container">
-                <div class="connecting-line"></div>
-                <div class="dot invest"></div>
-                <div class="dot maintain"></div>
-                <div class="dot monitor"></div>
-                <div class="dot migrate"></div>
-                <div class="dot obsolete"></div>
-            </div>
-
-            <!-- Text Container -->
-            <div class="text-container">
-                <div class="text-info">
-                    <div class="text-title">Build aggressively</div>
-                    <div class="text-desc">Establish Centers of Excellence, strategic hiring</div>
-                </div>
-
-                <div class="text-info">
-                    <div class="text-title">Support strategically</div>
-                    <div class="text-desc">Continue current initiatives, selective hiring</div>
-                </div>
-
-                <div class="text-info">
-                    <div class="text-title">Watch carefully</div>
-                    <div class="text-desc">Small-scale pilots, monitor competitors, prepare transition</div>
-                </div>
-
-                <div class="text-info">
-                    <div class="text-title">Actively phase out</div>
-                    <div class="text-desc">Stop new investments, reskill staff within 12-18 months</div>
-                </div>
-
-                <div class="text-info">
-                    <div class="text-title">Exit immediately</div>
-                    <div class="text-desc">Sunset programs, reallocate resources quickly</div>
-                </div>
-            </div>
-        </div>
-
-        <div id="details" class="details">
-            <h3 id="details-title">Click any stage to see details</h3>
-            <p id="details-content">Select a stage above to learn more about it.</p>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        const details = {
-            invest: {
-                title: "Invest - Build Aggressively",
-                content: "Maximum investment in emerging technology. Establish Centers of Excellence, hire top talent, and build strategic capabilities. Focus on gaining competitive advantage through early adoption."
-            },
-            maintain: {
-                title: "Maintain - Support Strategically", 
-                content: "Continue current initiatives with selective investments. Optimize existing processes and maintain competitive position. Balanced approach to resource allocation."
-            },
-            monitor: {
-                title: "Monitor - Watch Carefully",
-                content: "Limited new investments. Run small-scale pilots, monitor competitors, and prepare transition strategies. Stay informed about market trends and emerging alternatives."
-            },
-            migrate: {
-                title: "Migrate - Actively Phase Out",
-                content: "Stop new investments in legacy technology. Focus on reskilling staff and developing migration roadmaps. Plan smooth transition to newer technologies within 12-18 months."
-            },
-            obsolete: {
-                title: "Obsolete - Exit Immediately", 
-                content: "Immediately sunset programs and reallocate resources. Complete final migrations, archive critical data, and redirect investments to strategic initiatives."
+        /**
+         * Technology Lifecycle Component
+         * Simple HTML/JS Component for displaying technology lifecycle stages
+         */
+        class TechnologyLifecycle {
+            constructor(containerId, options = {}) {
+                this.container = document.getElementById(containerId);
+                this.selectedStage = null;
+                
+                // Default configuration
+                this.config = {
+                    title: 'Technology Lifecycle',
+                    showTitle: true,
+                    stages: [
+                        {
+                            id: 'invest',
+                            icon: '📈',
+                            text: 'Invest',
+                            title: 'Build aggressively',
+                            description: 'Establish Centers of Excellence, strategic hiring',
+                            color: '#007A9F',
+                            details: {
+                                title: 'Invest - Build Aggressively',
+                                content: 'Maximum investment in emerging technology. Establish Centers of Excellence, hire top talent, and build strategic capabilities. Focus on gaining competitive advantage through early adoption.'
+                            }
+                        },
+                        {
+                            id: 'maintain',
+                            icon: '⚙️',
+                            text: 'Maintain',
+                            title: 'Support strategically',
+                            description: 'Continue current initiatives, selective hiring',
+                            color: '#547E8B',
+                            details: {
+                                title: 'Maintain - Support Strategically',
+                                content: 'Continue current initiatives with selective investments. Optimize existing processes and maintain competitive position. Balanced approach to resource allocation.'
+                            }
+                        },
+                        {
+                            id: 'monitor',
+                            icon: '📊',
+                            text: 'Monitor',
+                            title: 'Watch carefully',
+                            description: 'Small-scale pilots, monitor competitors, prepare transition',
+                            color: '#676F84',
+                            details: {
+                                title: 'Monitor - Watch Carefully',
+                                content: 'Limited new investments. Run small-scale pilots, monitor competitors, and prepare transition strategies. Stay informed about market trends and emerging alternatives.'
+                            }
+                        },
+                        {
+                            id: 'migrate',
+                            icon: '☁️',
+                            text: 'Migrate',
+                            title: 'Actively phase out',
+                            description: 'Stop new investments, reskill staff within 12-18 months',
+                            color: '#324559',
+                            details: {
+                                title: 'Migrate - Actively Phase Out',
+                                content: 'Stop new investments in legacy technology. Focus on reskilling staff and developing migration roadmaps. Plan smooth transition to newer technologies within 12-18 months.'
+                            }
+                        },
+                        {
+                            id: 'obsolete',
+                            icon: '🗑️',
+                            text: 'Obsolete',
+                            title: 'Exit immediately',
+                            description: 'Sunset programs, reallocate resources quickly',
+                            color: '#7D7E81',
+                            details: {
+                                title: 'Obsolete - Exit Immediately',
+                                content: 'Immediately sunset programs and reallocate resources. Complete final migrations, archive critical data, and redirect investments to strategic initiatives.'
+                            }
+                        }
+                    ],
+                    ...options
+                };
+                
+                this.init();
             }
-        };
-
-        function showDetails(stage) {
-            const detailsDiv = document.getElementById('details');
-            const titleDiv = document.getElementById('details-title');
-            const contentDiv = document.getElementById('details-content');
             
-            titleDiv.textContent = details[stage].title;
-            contentDiv.textContent = details[stage].content;
-            detailsDiv.className = 'details show';
+            init() {
+                if (!this.container) {
+                    console.error('Technology Lifecycle: Container not found');
+                    return;
+                }
+                
+                this.addStyles();
+                this.render();
+                this.bindEvents();
+            }
+            
+            addStyles() {
+                const style = document.createElement('style');
+                style.textContent = `
+                    .tech-lifecycle {
+                        font-family: 'Roboto', sans-serif;
+                        background: white;
+                        border-radius: 15px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        padding: 2rem;
+                    }
+
+                    .tech-lifecycle-title {
+                        color: #333;
+                        font-weight: 500;
+                        margin-bottom: 3rem;
+                        text-align: center;
+                    }
+
+                    .tech-lifecycle-content {
+                        margin: 4rem 0;
+                    }
+
+                    .pin-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 0;
+                    }
+
+                    .tech-pin {
+                        text-align: center;
+                        cursor: pointer;
+                        position: relative;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .pin-wrapper {
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    .pin-head {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-weight: 500;
+                        position: relative;
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+                        margin: 0 auto;
+                        transition: all 0.3s ease;
+                    }
+
+                    .pin-content {
+                        background: white;
+                        border-radius: 50px;
+                        padding: 12px 18px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .pin-icon {
+                        font-size: 28px;
+                        color: #333;
+                    }
+
+                    .pin-text {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #333;
+                    }
+
+                    .pin-tail {
+                        width: 0;
+                        height: 0;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -23px;
+                    }
+
+                    .dot-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 40px 80px;
+                        position: relative;
+                        margin-bottom: 20px;
+                    }
+
+                    .connecting-line {
+                        position: absolute;
+                        top: 50%;
+                        left: 89px;
+                        right: 89px;
+                        height: 3px;
+                        background: transparent;
+                        border-top: 3px dotted #dee2e6;
+                        z-index: 1;
+                    }
+
+                    .lifecycle-dot {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        z-index: 2;
+                        position: relative;
+                    }
+
+                    .text-container {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .text-info {
+                        text-align: center;
+                        max-width: 160px;
+                    }
+
+                    .text-title {
+                        font-weight: 500;
+                        color: #333;
+                        margin: 0 0 8px 0;
+                        font-size: 16px;
+                    }
+
+                    .text-desc {
+                        font-size: 14px;
+                        color: #6c757d;
+                        line-height: 1.4;
+                        font-weight: 300;
+                    }
+
+                    .lifecycle-details {
+                        background: #f8f9fa;
+                        border-radius: 10px;
+                        margin-top: 2rem;
+                        border-left: 4px solid #007A9F;
+                        padding: 1.5rem;
+                        transition: all 0.3s ease;
+                    }
+
+                    .details-title {
+                        color: #333;
+                        margin: 0 0 1rem 0;
+                        font-weight: 500;
+                    }
+
+                    .details-content {
+                        color: #555;
+                        line-height: 1.6;
+                        margin: 0;
+                        font-weight: 300;
+                    }
+
+                    .tech-pin:hover .pin-head {
+                        transform: scale(1.08);
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .tech-pin .text-info {
+                        display: none;
+                    }
+
+                    @media (max-width: 768px) {
+                        .tech-lifecycle-title {
+                            font-size: 2rem;
+                            margin-bottom: 2rem;
+                        }
+
+                        .tech-lifecycle-content {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            gap: 20px;
+                        }
+
+                        .pin-container {
+                            width: 100%;
+                            justify-content: space-between;
+                            margin-bottom: 0;
+                        }
+
+                        .dot-container {
+                            display: none;
+                        }
+
+                        .text-container {
+                            display: none;
+                        }
+
+                        .tech-pin {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            flex: 1;
+                            max-width: 18%;
+                        }
+
+                        .tech-pin .text-info {
+                            display: block;
+                            text-align: center;
+                            margin-top: 0;
+                            padding-top: 10px;
+                        }
+
+                        .pin-wrapper {
+                            position: relative;
+                            margin-bottom: 10px;
+                        }
+
+                        .pin-head {
+                            width: 80px;
+                            height: 80px;
+                            margin-bottom: 0;
+                        }
+
+                        .pin-content {
+                            padding: 8px 12px;
+                            gap: 5px;
+                        }
+
+                        .pin-icon {
+                            font-size: 18px;
+                        }
+
+                        .pin-text {
+                            font-size: 11px;
+                        }
+
+                        .pin-tail {
+                            width: 0;
+                            height: 0;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -18px;
+                            margin: 0;
+                        }
+
+                        .tech-pin .text-title {
+                            font-size: 12px;
+                            margin-bottom: 4px;
+                            font-weight: 500;
+                        }
+
+                        .tech-pin .text-desc {
+                            font-size: 10px;
+                            line-height: 1.3;
+                            max-width: 100px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .tech-lifecycle {
+                            margin: 10px;
+                            padding: 1rem;
+                        }
+
+                        .tech-lifecycle-title {
+                            font-size: 1.75rem;
+                        }
+
+                        .tech-lifecycle-content {
+                            flex-direction: column;
+                            gap: 2.5rem;
+                            align-items: center;
+                        }
+
+                        .pin-container {
+                            flex-direction: column;
+                            gap: 2.5rem;
+                            align-items: center;
+                        }
+
+                        .tech-pin {
+                            max-width: 200px;
+                            width: 100%;
+                        }
+
+                        .pin-wrapper {
+                            margin-bottom: 15px;
+                        }
+
+                        .pin-head {
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                        .pin-content {
+                            padding: 10px 15px;
+                            gap: 6px;
+                        }
+
+                        .pin-icon {
+                            font-size: 22px;
+                        }
+
+                        .pin-text {
+                            font-size: 13px;
+                        }
+
+                        .pin-tail {
+                            bottom: -23px;
+                            border-left: 12px solid transparent;
+                            border-right: 12px solid transparent;
+                        }
+
+                        .tech-pin .text-info {
+                            display: block;
+                            margin-top: 0;
+                            padding-top: 15px;
+                        }
+
+                        .tech-pin .text-title {
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+
+                        .tech-pin .text-desc {
+                            font-size: 13px;
+                            max-width: 180px;
+                            font-weight: 300;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            render() {
+                this.container.innerHTML = `
+                    <div class="tech-lifecycle">
+                        ${this.config.showTitle ? `<h1 class="tech-lifecycle-title">${this.config.title}</h1>` : ''}
+                        
+                        <div class="tech-lifecycle-content">
+                            <!-- Pin Container -->
+                            <div class="pin-container">
+                                ${this.config.stages.map(stage => `
+                                    <div class="tech-pin" data-stage="${stage.id}">
+                                        <div class="pin-wrapper">
+                                            <div class="pin-head" style="background-color: ${stage.color}">
+                                                <div class="pin-content">
+                                                    <div class="pin-icon">${stage.icon}</div>
+                                                    <div class="pin-text">${stage.text}</div>
+                                                </div>
+                                            </div>
+                                            <div class="pin-tail" style="border-top: 30px solid ${stage.color}"></div>
+                                        </div>
+                                        <div class="text-info">
+                                            <div class="text-title">${stage.title}</div>
+                                            <div class="text-desc">${stage.description}</div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+
+                            <!-- Dot Container -->
+                            <div class="dot-container">
+                                <div class="connecting-line"></div>
+                                ${this.config.stages.map(stage => `
+                                    <div class="lifecycle-dot" style="background-color: ${stage.color}"></div>
+                                `).join('')}
+                            </div>
+
+                            <!-- Text Container -->
+                            <div class="text-container">
+                                ${this.config.stages.map(stage => `
+                                    <div class="text-info">
+                                        <div class="text-title">${stage.title}</div>
+                                        <div class="text-desc">${stage.description}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Details Section -->
+                        <div class="lifecycle-details">
+                            <h3 class="details-title">Click any stage to see details</h3>
+                            <p class="details-content">Select a stage above to learn more about it.</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            bindEvents() {
+                const pins = this.container.querySelectorAll('.tech-pin');
+                pins.forEach(pin => {
+                    pin.addEventListener('click', () => {
+                        const stageId = pin.getAttribute('data-stage');
+                        this.showDetails(stageId);
+                    });
+                });
+            }
+            
+            showDetails(stageId) {
+                const stage = this.config.stages.find(s => s.id === stageId);
+                if (!stage) return;
+                
+                this.selectedStage = stage;
+                
+                const detailsTitle = this.container.querySelector('.details-title');
+                const detailsContent = this.container.querySelector('.details-content');
+                
+                detailsTitle.textContent = stage.details.title;
+                detailsContent.textContent = stage.details.content;
+            }
+            
+            // Public methods for customization
+            updateStages(stages) {
+                this.config.stages = stages;
+                this.render();
+                this.bindEvents();
+            }
+            
+            updateTitle(title) {
+                this.config.title = title;
+                const titleElement = this.container.querySelector('.tech-lifecycle-title');
+                if (titleElement) {
+                    titleElement.textContent = title;
+                }
+            }
         }
+
+        // Initialize the component
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create instance
+            const lifecycle = new TechnologyLifecycle('technology-lifecycle');
+            
+            // Example of customization (optional)
+            // lifecycle.updateTitle('Custom Technology Lifecycle');
+            
+            // Example of updating stages (optional)
+            /*
+            lifecycle.updateStages([
+                {
+                    id: 'emerging',
+                    icon: '🌱',
+                    text: 'Emerging',
+                    title: 'Early adoption',
+                    description: 'New technology evaluation',
+                    color: '#28a745',
+                    details: {
+                        title: 'Emerging Technology',
+                        content: 'Evaluate and pilot new technologies...'
+                    }
+                }
+                // ... more stages
+            ]);
+            */
+        });
     </script>
 </body>
 </html>

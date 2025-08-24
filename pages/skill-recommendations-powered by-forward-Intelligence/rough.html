@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Makes SynapseScope Different</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .header .brand {
+            color: #4fc3f7;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .comparison-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-column h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        .generic-advice h2 {
+            color: #666;
+        }
+
+        .synapse-intelligence h2 {
+            color: #2196f3;
+            border-bottom-color: #2196f3;
+        }
+
+        .comparison-item {
+            margin-bottom: 40px;
+        }
+
+        .item-number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .generic-advice .item-number {
+            color: #666;
+        }
+
+        .synapse-intelligence .item-number {
+            color: #2196f3;
+        }
+
+        .item-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .sub-items {
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .sub-item {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .sub-item::before {
+            content: "•";
+            color: #2196f3;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        .action-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .maintain {
+            background: #e8f5e8;
+            color: #2e7d2e;
+        }
+
+        .migrate {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .invest {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .transition {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .build {
+            background: #e0f2f1;
+            color: #00695c;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 500;
+            margin-top: 20px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .comparison-section {
+                padding: 30px 20px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .comparison-column h2 {
+                font-size: 1.5rem;
+            }
+
+            .item-number {
+                font-size: 1.3rem;
+            }
+
+            .item-content {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation effects */
+        .comparison-section {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .comparison-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>What Makes <span class="brand">SynapseScope</span> Different?</h1>
+            <p>We don't give vague recommendations — we deliver precise, context-aware intelligence tailored to your tech stack and use case.</p>
+        </div>
+
+        <div class="comparison-section">
+            <div class="comparison-grid">
+                <div class="comparison-column generic-advice">
+                    <h2>Generic Advice</h2>
+                    
+                    <div class="comparison-item">
+                        <div class="item-number">1.</div>
+                        <div class="item-content">SQL is valuable</div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="item-number">2.</div>
+                        <div class="item-content">Everyone needs Excel</div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="item-number">3.</div>
+                        <div class="item-content">Cloud is the future</div>
+                    </div>
+                </div>
+
+                <div class="comparison-column synapse-intelligence">
+                    <h2>SynapseScope Intelligence</h2>
+                    
+                    <div class="comparison-item">
+                        <div class="item-number">1.</div>
+                        <div class="item-content">
+                            SQL for Data Engineering: <span class="action-badge maintain">Maintain</span>
+                            <div class="sub-items">
+                                <div class="sub-item">SQL for Basic Reporting: <span class="action-badge migrate">Migrate</span></div>
+                                <div class="sub-item">SQL + AI Integration: <span class="action-badge invest">Invest</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="item-number">2.</div>
+                        <div class="item-content">
+                            Excel for Finance: <span class="action-badge maintain">Maintain</span>
+                            <div class="sub-items">
+                                <div class="sub-item">Excel for Data Analysis: <span class="action-badge transition">Transition</span></div>
+                                <div class="sub-item">Excel + Python: <span class="action-badge invest">Invest</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-item">
+                        <div class="item-number">3.</div>
+                        <div class="item-content">
+                            AWS Basics: <span class="action-badge maintain">Maintain</span>
+                            <div class="sub-items">
+                                <div class="sub-item">Cloud Security: <span class="action-badge invest">Invest</span></div>
+                                <div class="sub-item">Multi-Cloud Orchestration: <span class="action-badge build">Build</span> <span style="color: #4fc3f7; font-weight: 600;">(early adoption)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                We don't generalize—we deliver specific, data-driven actionable intelligence.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scroll animation for items
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.comparison-item');
+            
+            // Intersection Observer for fade-in animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            items.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(item);
+            });
+
+            // Add click animation for action badges
+            const badges = document.querySelectorAll('.action-badge');
+            badges.forEach(badge => {
+                badge.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+
+            // Add hover effect for sub-items
+            const subItems = document.querySelectorAll('.sub-item');
+            subItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.paddingLeft = '10px';
+                    this.style.transition = 'padding-left 0.3s ease';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.paddingLeft = '0px';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

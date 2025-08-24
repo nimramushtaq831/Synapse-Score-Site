@@ -20,7 +20,7 @@ html {
 /* Hero Section Background */
 .hero-section {
   position: relative;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   display: grid;
   align-items: center;
   background: 
@@ -32,8 +32,6 @@ html {
 
 /* Sub Title (Top Small Line) */
 .hero-subtitle {
-
-   
   width: 709px;
   font-size: 16px;
   font-weight: 600;
@@ -109,20 +107,15 @@ html {
 
 
 /* 2nd Section  */
-/* Section wrapper */
 .framework-section {
-
-  
   padding-top: 80px;
   text-align: center;
-
 }
 
 /* Container for content */
 .framework-container {
     width: 619px;
     margin: 0 auto;
-  
 }
 
 /* Heading styles */
@@ -153,8 +146,6 @@ html {
 
 
 /* 3rd Section  */
-
-/* Section Layout */
 .four-factor-section {
   padding-top: 20px ;
 }
@@ -173,17 +164,13 @@ html {
 .framework-image img {
   max-width: 456px;
   height: 420px;
-  
-  
 }
 
 /* Right Content */
 .framework-details {
   padding-top: 30px ;
   max-width: 545px;
-  height: 341px;
-  
-  
+  height: 341px;  
 }
 
 .framework-intro {
@@ -202,13 +189,11 @@ html {
 }
 
 /* Framework Icons */
-
 .framework-icon {
   width: 44px;   
   height: 44px;
   margin-right: 15px;
 }
-
 
 .framework-item h3 {
   margin: 0;
@@ -242,13 +227,11 @@ html {
 }
 
 /* 4th section */
-/* Hidden Cost Section */
 .hidden-cost-section {
   width: 619px;
   height: 39px;
-  
-   margin-top: 40px;
-   margin-left: 98px;
+  margin-top: 40px;
+  margin-left: 98px;
   padding: 60px 10px; 
   display: flex;
   justify-content: flex-start; 
@@ -273,7 +256,6 @@ html {
 
 /* 5th section */
         .container  .wrong-skills{
-        
             max-width: 1200px;
             margin-top: 90px ;
             margin-bottom: 90px;
@@ -461,110 +443,389 @@ height: 47px;
   font-weight: 400;
 }
 /* 8th ssection */
-  section.timeline-section {
-      padding: 60px 40px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background: #f9f9f9;
-      position: relative;
-    }
+  .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .timeline {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 40px;
-      position: relative;
-      max-width: 1200px;
-    }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
 
-    /* Dotted line connector */
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 110px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-image: repeating-linear-gradient(
-        to right,
-        #bbb,
-        #bbb 6px,
-        transparent 6px,
-        transparent 12px
-      );
-      z-index: 0;
-    }
+        .lifecycle {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 60px 0;
+        }
 
-    .step {
-      text-align: center;
-      width: 160px;
-      position: relative;
-      z-index: 1;
-    }
+        /* Pin Container */
+        .pin-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 0;
+        }
 
-    .circle {
-      width: 100px;
-      height: 100px;
-      margin: auto;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: bold;
-      position: relative;
-    }
+        .pin {
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
 
-    .circle img {
-      width: 35px;
-      height: 35px;
-      margin-bottom: 8px;
-    }
+        .pin-wrapper {
+            position: relative;
+            display: inline-block;
+        }
 
-    .circle span {
-      display: block;
-      font-size: 16px;
-    }
+        .pin-head {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
 
-    /* Specific circle colors */
-    .invest { background: #0080a7; }
-    .maintain { background: #6c7a89; }
-    .monitor { background: #9aa3ad; }
-    .migrate { background: #2f3a4c; }
-    .obsolete { background: #b0b0b0; }
+        .pin-content {
+            background: white;
+            border-radius: 50px;
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
 
-    /* Small circle connector below each big circle */
-    .small-circle {
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      border: 3px solid #bbb;
-      border-radius: 50%;
-      margin: 20px auto;
-    }
+        .pin-icon {
+            font-size: 24px;
+            color: #333;
+        }
 
-    .text {
-      font-size: 16px;
-      color: rebeccapurple;
-      line-height: 26px;
-      font-weight: 400;
-    }
+        .pin-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
 
-    .text strong {
-      display: block;
-      margin-bottom: 5px;
-    }
+        .pin-tail {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -23px;
+        }
 
+        /* Colors */
+        .invest .pin-head { background-color: #007A9F; }
+        .invest .pin-tail { border-top: 30px solid #007A9F; }
+
+        .maintain .pin-head { background-color: #547E8B; }
+        .maintain .pin-tail { border-top: 30px solid #547E8B; }
+
+        .monitor .pin-head { background-color: #676F84; }
+        .monitor .pin-tail { border-top: 30px solid #676F84; }
+
+        .migrate .pin-head { background-color: #324559; }
+        .migrate .pin-tail { border-top: 30px solid #324559; }
+
+        .obsolete .pin-head { background-color: #7D7E81; }
+        .obsolete .pin-tail { border-top: 30px solid #7D7E81; }
+
+        /* Dot Container */
+        .dot-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 80px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .connecting-line {
+            position: absolute;
+            top: 50%;
+            left: 89px;
+            right: 89px;
+            height: 3px;
+            background: transparent;
+            border-top: 3px dotted #bbb;
+            z-index: 1;
+        }
+
+        .dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .dot.invest { background-color: #007A9F; }
+        .dot.maintain { background-color: #547E8B; }
+        .dot.monitor { background-color: #676F84; }
+        .dot.migrate { background-color: #324559; }
+        .dot.obsolete { background-color: #7D7E81; }
+
+        /* Text Container */
+        .text-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .text-info {
+            text-align: center;
+            max-width: 160px;
+        }
+
+        .text-title {
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .text-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        .details {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            display: none;
+        }
+
+        .details.show {
+            display: block;
+        }
+
+        .details h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+        }
+
+        .details p {
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .pin:hover .pin-head {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pin .text-info {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .lifecycle {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .pin-container {
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 0;
+            }
+
+            .dot-container {
+                display: none;
+            }
+
+            .text-container {
+                display: none;
+            }
+
+            .pin {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+                max-width: 18%;
+            }
+
+            .pin .text-info {
+                display: block;
+                text-align: center;
+                margin-top: 0;
+                padding-top: 10px;
+            }
+
+            .pin-wrapper {
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+            .pin-head {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 0;
+            }
+
+            .pin-content {
+                padding: 6px 10px;
+            }
+
+            .pin-icon {
+                font-size: 16px;
+            }
+
+            .pin-text {
+                font-size: 10px;
+            }
+
+            .pin-tail {
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -18px;
+                margin: 0;
+            }
+
+            .invest .pin-tail { border-top: 20px solid #007A9F; }
+            .maintain .pin-tail { border-top: 20px solid #547E8B; }
+            .monitor .pin-tail { border-top: 20px solid #676F84; }
+            .migrate .pin-tail { border-top: 20px solid #324559; }
+            .obsolete .pin-tail { border-top: 20px solid #7D7E81; }
+
+            .pin .text-title {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+
+            .pin .text-desc {
+                font-size: 10px;
+                line-height: 1.2;
+                max-width: 100px;
+            }
+
+            .details {
+                padding: 20px;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .lifecycle {
+                flex-direction: column;
+                gap: 40px;
+                align-items: center;
+            }
+
+            .pin-container {
+                flex-direction: column;
+                gap: 40px;
+                align-items: center;
+            }
+
+            .pin {
+                max-width: 200px;
+                width: 100%;
+            }
+
+            .pin-wrapper {
+                margin-bottom: 15px;
+            }
+
+            .pin-head {
+                width: 100px;
+                height: 100px;
+            }
+
+            .pin-content {
+                padding: 8px 12px;
+            }
+
+            .pin-icon {
+                font-size: 20px;
+            }
+
+            .pin-text {
+                font-size: 12px;
+            }
+
+            .pin-tail {
+                bottom: -23px;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+            }
+
+            .invest .pin-tail { border-top: 25px solid #007A9F; }
+            .maintain .pin-tail { border-top: 25px solid #547E8B; }
+            .monitor .pin-tail { border-top: 25px solid #676F84; }
+            .migrate .pin-tail { border-top: 25px solid #324559; }
+            .obsolete .pin-tail { border-top: 25px solid #7D7E81; }
+
+            .pin .text-info {
+                display: block;
+                margin-top: 0;
+                padding-top: 15px;
+            }
+
+            .pin .text-title {
+                font-size: 14px;
+            }
+
+            .pin .text-desc {
+                font-size: 12px;
+                max-width: 180px;
+            }
+        }
  
 
 /* 9th section */
-/* Section Styling */
 .career-intro {
   text-align: center;
   width: 415px;
-  height: 47px;
   margin: 10px auto;
 }
 
@@ -583,15 +844,12 @@ height: 47px;
   line-height: 26px;
 }
 
-
-
 /* 10th section */
 .Market-Investment-Lens{
   text-align: center;
   width: 415px;
   height: 47px;
   margin: 70px auto;
-  
 }
 
 .Market-Investment-Lens h3 {
@@ -607,4 +865,427 @@ height: 47px;
   color: #525252;
   line-height: 26px;
   font-weight: 400;
+}
+/* 10th section */
+
+.difference-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 47px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-title .highlight {
+  color: #007AFF;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #525252;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* Comparison Box */
+.comparison-box {
+  background: #F6F6F6;
+  border-radius: 14px;
+  padding: 40px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; /* space between left & right columns 
+  */
+}
+
+.column {
+  flex: 1;
+  text-align: left;
+}
+
+.column h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.column ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 25px; 
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #525252;
+}
+
+.column li:last-child {
+  margin-bottom: 0;
+}
+
+/* Extra spacing only for left column to balance height */
+.generic li {
+  margin-bottom: 60px; /* more gap to match right side */
+}
+
+.generic li:last-child {
+  margin-bottom: 0;
+}
+
+/* Right Column Styling */
+.intelligence h3 {
+  color: #007AFF;
+}
+
+.maintain {
+  color: #547E8B;
+  font-weight: 700;
+}
+
+.migrate {
+  color: #324559;
+  font-weight: 700;
+}
+
+.invest,
+.transition,
+.build {
+  color: #007A9F;
+  font-weight: 700;
+}
+
+/* Footer Note inside box */
+.footer-note {
+  text-align: center;
+  font-size: 18px;
+  color: #525252;
+  font-weight: 500;
+  line-height: 26px;
+  margin-top: 5px;
+}
+
+/* 11th section */
+.investment-section {
+  background-color: #324559; 
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.investment-section .investment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.investment-section .content-left {
+  flex: 1;
+}
+
+.investment-section .section-title {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.investment-section .content-left p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investment-section .content-left strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Right Analysis Card */
+.investment-section .content-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.investment-section .analysis-card {
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  margin-top: 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+.investment-section .analysis-card h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+}
+
+.investment-section .analysis-item {
+  background: #F6F6F6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center; 
+  gap: 8px;
+}
+
+.investment-section .analysis-item strong {
+  color: #000;
+  flex-shrink: 0;
+}
+
+.investment-section .analysis-item p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  
+}
+
+.investment-section .negative {
+  color: #FF9C57; /* red */
+  font-weight: 500;
+  
+}
+
+.investment-section .positive {
+  color: #5DFF4D; /* green */
+  font-weight: 500;
+}
+
+/* Make SVG icons align with text */
+.investment-section .analysis-item .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit; /* now icon follows parent text color */
+}
+
+.investment-section .analysis-item svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* 12th section */
+.skill-decision-section {
+  padding: 60px 80px;
+  max-width: 100%;
+  margin-top: 20px;
+  
+  background-color: #223140;
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.section-header p {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.option-group {
+  margin-top: 40px;
+}
+
+.option-group h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 47px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 390px;
+  
+  background: #314457;
+  border: 1px solid #94a3b8;
+  border-radius: 14px;
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-5px);
+}
+
+.card-icon img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h4 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card-arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 13th section */
+.transparency-section {
+  text-align: left;
+  padding: 60px 98px;
+}
+
+.transparency-header h2 {
+  font-size: 36px;
+  line-height: 47px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.transparency-header p {
+    font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #525252;
+  margin-bottom: 50px;
+}
+
+.transparency-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.transparency-card {
+  /* max-width: 280px; */
+  text-align: center;
+  width: 371px;
+height: 320px;
+
+
+  
+}
+
+.transparency-card h3 {
+ 
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #525252;
+}
+
+.transparency-card p {
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #525252;
+  margin-top: 8px;
+}
+
+/* Circle Styles */
+.circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 15px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2.5;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #0074d9;
+  stroke-width: 2.5;
+  stroke-dasharray: 100, 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #0074d9;
 }

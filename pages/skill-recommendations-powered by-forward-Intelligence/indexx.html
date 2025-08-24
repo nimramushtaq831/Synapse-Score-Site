@@ -246,14 +246,140 @@
 
     <!-- 8th section -->
 
-    <section class="lifecycle-section">
-      <div class="lifecycle-container">
-        <img src="assests/Icons/Organizational Strategy Lens.png" alt="Lifecycle Process" />
-      </div>
-    </section>
+    <div class="container">
+        <h1>Technology Lifecycle</h1>
+        
+        <div class="lifecycle">
+            <!-- Pin Container -->
+            <div class="pin-container">
+                <div class="pin invest" onclick="showDetails('invest')">
+                    <div class="pin-wrapper">
+                        <div class="pin-head">
+                            <div class="pin-content">
+                                <div class="pin-icon">📈</div>
+                                <div class="pin-text">Invest</div>
+                            </div>
+                        </div>
+                        <div class="pin-tail"></div>
+                    </div>
+                    <div class="text-info">
+                        <div class="text-title">Build aggressively</div>
+                        <div class="text-desc">Establish Centers of Excellence, strategic hiring</div>
+                    </div>
+                </div>
+
+                <div class="pin maintain" onclick="showDetails('maintain')">
+                    <div class="pin-wrapper">
+                        <div class="pin-head">
+                            <div class="pin-content">
+                                <div class="pin-icon">⚙️</div>
+                                <div class="pin-text">Maintain</div>
+                            </div>
+                        </div>
+                        <div class="pin-tail"></div>
+                    </div>
+                    <div class="text-info">
+                        <div class="text-title">Support strategically</div>
+                        <div class="text-desc">Continue current initiatives, selective hiring</div>
+                    </div>
+                </div>
+
+                <div class="pin monitor" onclick="showDetails('monitor')">
+                    <div class="pin-wrapper">
+                        <div class="pin-head">
+                            <div class="pin-content">
+                                <div class="pin-icon">📊</div>
+                                <div class="pin-text">Monitor</div>
+                            </div>
+                        </div>
+                        <div class="pin-tail"></div>
+                    </div>
+                    <div class="text-info">
+                        <div class="text-title">Watch carefully</div>
+                        <div class="text-desc">Small-scale pilots, monitor competitors, prepare transition</div>
+                    </div>
+                </div>
+
+                <div class="pin migrate" onclick="showDetails('migrate')">
+                    <div class="pin-wrapper">
+                        <div class="pin-head">
+                            <div class="pin-content">
+                                <div class="pin-icon">☁️</div>
+                                <div class="pin-text">Migrate</div>
+                            </div>
+                        </div>
+                        <div class="pin-tail"></div>
+                    </div>
+                    <div class="text-info">
+                        <div class="text-title">Actively phase out</div>
+                        <div class="text-desc">Stop new investments, reskill staff within 12-18 months</div>
+                    </div>
+                </div>
+
+                <div class="pin obsolete" onclick="showDetails('obsolete')">
+                    <div class="pin-wrapper">
+                        <div class="pin-head">
+                            <div class="pin-content">
+                                <div class="pin-icon">🗑️</div>
+                                <div class="pin-text">Obsolete</div>
+                            </div>
+                        </div>
+                        <div class="pin-tail"></div>
+                    </div>
+                    <div class="text-info">
+                        <div class="text-title">Exit immediately</div>
+                        <div class="text-desc">Sunset programs, reallocate resources quickly</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dot Container -->
+            <div class="dot-container">
+                <div class="connecting-line"></div>
+                <div class="dot invest"></div>
+                <div class="dot maintain"></div>
+                <div class="dot monitor"></div>
+                <div class="dot migrate"></div>
+                <div class="dot obsolete"></div>
+            </div>
+
+            <!-- Text Container -->
+            <div class="text-container">
+                <div class="text-info">
+                    <div class="text-title">Build aggressively</div>
+                    <div class="text-desc">Establish Centers of Excellence, strategic hiring</div>
+                </div>
+
+                <div class="text-info">
+                    <div class="text-title">Support strategically</div>
+                    <div class="text-desc">Continue current initiatives, selective hiring</div>
+                </div>
+
+                <div class="text-info">
+                    <div class="text-title">Watch carefully</div>
+                    <div class="text-desc">Small-scale pilots, monitor competitors, prepare transition</div>
+                </div>
+
+                <div class="text-info">
+                    <div class="text-title">Actively phase out</div>
+                    <div class="text-desc">Stop new investments, reskill staff within 12-18 months</div>
+                </div>
+
+                <div class="text-info">
+                    <div class="text-title">Exit immediately</div>
+                    <div class="text-desc">Sunset programs, reallocate resources quickly</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="details" class="details">
+            <h3 id="details-title">Click any stage to see details</h3>
+            <p id="details-content">Select a stage above to learn more about it.</p>
+        </div>
+    </div>
 
     <!-- 9th section -->
-    <!-- Individual Career Lens Section -->
+    
     <section class="career-intro">
       <h2>Individual Career Lens</h2>
       <p>
@@ -262,18 +388,277 @@
       </p>
     </section>
     <!-- 10th section -->
+ <section class="difference-section">
+    <div class="container">
+      <h2 class="section-title">
+        What Makes <span class="highlight">SynapseScope Different?</span>
+      </h2>
+      <p class="subtitle">
+        We don’t give vague recommendations — we deliver precise, context-aware 
+        intelligence tailored to your tech stack and use case.
+      </p>
 
+      <!-- Comparison Box -->
+      <div class="comparison-box">
+        <div class="columns">
+          <!-- Left Column -->
+          <div class="column generic">
+            <h3>Generic Advice</h3>
+            <ol>
+              <li>SQL is valuable</li>
+              <li>Everyone needs Excel</li>
+              <li>Cloud is the future</li>
+            </ol>
+          </div>
+
+          <!-- Right Column -->
+          <div class="column intelligence">
+            <h3>SynapseScope Intelligence</h3>
+            <ol>
+              <li>
+                SQL for Data Engineering: <span class="maintain">Maintain</span><br>
+                • SQL for Basic Reporting: <span class="migrate">Migrate</span><br>
+                • SQL + AI Integration: <span class="invest">Invest</span>
+              </li>
+              <li>
+                Excel for Finance: <span class="maintain">Maintain</span><br>
+                • Excel for Data Analysis: <span class="transition">Transition</span><br>
+                • Excel + Python: <span class="invest">Invest</span>
+              </li>
+              <li>
+                AWS Basics: <span class="maintain">Maintain</span><br>
+                • Cloud Security: <span class="invest">Invest</span><br>
+                • Multi-Cloud Orchestration: 
+                <span class="build">Build (early adoption)</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Footer Note inside box -->
+        <p class="footer-note">
+          We don’t generalize—we deliver specific, data-driven actionable intelligence.
+        </p>
+      </div>
+    </div>
+  </section>
     <!-- 11th Section -->
+     <section class="investment-section">
+    <div class="investment-container">
+      <!-- Left Content -->
+      <div class="content-left">
+        <h2 class="section-title">Market Investment Lens</h2>
+        
+        <p><strong>Company:</strong> Retailer Analytics Team</p>
+        <p><strong>Situation:</strong> Heavily invested in traditional BI tools</p>
+        
+        <p><strong>SynapseScope Analysis (2023):</strong></p>
+        <p><strong>Traditional BI:</strong> Migrate (negative signals)</p>
+        <p><strong>AI Analytics:</strong> Invest (high momentum)</p>
+        
+        <p><strong>Outcome:</strong> Early pivot to self-service AI analytics; reduced manual reporting by 70%, outperforming competitors still struggling with legacy skills.</p>
+      </div>
 
+      <!-- Right Card -->
+     <div class="content-right">
+  <div class="analysis-card">
+    <h3>SynapseScope Analysis (2023)</h3>
 
+    <!-- Traditional BI -->
+    <div class="analysis-item">
+      <strong>Traditional BI:</strong> 
+      <span class="icon">
+        <!-- Refresh / Migrate Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 4V1L8 5l4 4V6c3.309 0 6 2.691 6 6a6 6 0 01-10.392 4.392l-1.415 1.415A7.974 7.974 0 0012 20c4.418 0 8-3.582 8-8s-3.582-8-8-8z"/>
+        </svg>
+      </span>
+      Migrate
+      <p class="negative">Negative Signal</p>
+    </div>
 
+    <!-- AI Analytics -->
+    <div class="analysis-item">
+      <strong>AI Analytics:</strong> 
+      <span class="icon">
+        <!-- Chart / Analytics Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2V4h-2v13zm4 0h2v-9h-2v9z"/>
+        </svg>
+      </span>
+      Invest
+      <p class="positive">High Momentum</p>
+    </div>
+  </div>
+</div>
 
+    </div>
+  </section>
 
+  <!-- 12th section -->
+    <section class="skill-decision-section">
+    <div class="section-header">
+      <h2>Start Making Strategic Skill<br> Decisions Today</h2>
+      <p>The future of work is being written now. Make sure you’re prepared for what’s next.</p>
+    </div>
 
+    <!-- Interactive Options -->
+    <div class="option-group">
+      <h3>See It In Action (Interactive Options)</h3>
+      <div class="card-container">
+        
+        <div class="card">
+          <div class="card-icon">
+            <img src="assests/Icons/Test Any Skill.svg" alt="Test Skill">
+          </div>
+          <div class="card-content">
+            <h4>Test Any Skill</h4>
+            <p>Enter a skill and see live, actionable recommendations.</p>
+          </div>
+          <div class="card-arrow">
+            <img src="assests/Icons/arrow.svg" alt="Go">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <img src="assests/Icons/Get Team Intelligence.svg" alt="Team Intelligence">
+          </div>
+          <div class="card-content">
+            <h4>Get Team Intelligence</h4>
+            <p>Evaluate strategic recommendations for your entire team.</p>
+          </div>
+          <div class="card-arrow">
+            <img src="assests/Icons/arrow.svg" alt="Go">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <img src="assests/Icons/Analyze Your Role.svg" alt="Analyze Role">
+          </div>
+          <div class="card-content">
+            <h4>Analyze Your Role</h4>
+            <p>Upload a role description for comprehensive insights.</p>
+          </div>
+          <div class="card-arrow">
+            <img src="assests/Icons/arrow.svg" alt="Go">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Supportive Tools -->
+    <div class="option-group">
+      <h3>Go Deeper (Supportive Tools)</h3>
+      <div class="card-container">
+
+        <div class="card">
+          <div class="card-icon">
+            <img src="assests/Icons/Book a Strategy Session.svg" alt="Strategy Session">
+          </div>
+          <div class="card-content">
+            <h4>Book a Strategy Session</h4>
+            <p>Personalized guidance from our workforce strategists</p>
+          </div>
+          <div class="card-arrow">
+            <img src="assests/Icons/arrow.svg" alt="Go">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <img src="assests/Icons/Start Free Trial.svg" alt="Free Trial">
+          </div>
+          <div class="card-content">
+            <h4>Start Free Trial</h4>
+            <p>Full access to SynapseScope intelligence</p>
+          </div>
+          <div class="card-arrow">
+            <img src="assests/Icons/arrow.svg" alt="Go">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- 13th section -->
+  <section class="transparency-section">
+    <div class="transparency-header">
+      <h2>Trust Through Transparency</h2>
+      <p>Data-backed insights. Visible impact. No black boxes.</p>
+    </div>
+
+    <div class="transparency-cards">
+      <!-- Card 1 -->
+      <div class="transparency-card">
+        <div class="circle" data-percentage="87.1">
+          <svg viewBox="0 0 36 36">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path class="circle-progress"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+          <div class="circle-text">87.1%</div>
+        </div>
+        <h3>87% Accuracy</h3>
+        <p>In 18-month skill predictions—helping you make confident, forward-looking decisions.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="transparency-card">
+        <div class="circle" data-percentage="45">
+          <svg viewBox="0 0 36 36">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path class="circle-progress"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+          <div class="circle-text">$45M+</div>
+        </div>
+        <h3>$45M+ Saved</h3>
+        <p>By eliminating outdated or unnecessary training across enterprise teams.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="transparency-card">
+        <div class="circle" data-percentage="100">
+          <svg viewBox="0 0 36 36">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path class="circle-progress"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+          <div class="circle-text">100%</div>
+        </div>
+        <h3>100% Transparent Methodology</h3>
+        <p>See the data behind every recommendation with full auditability and evidence-backed suggestions.</p>
+      </div>
+    </div>
+  </section>
 
 
 
   </main>
+
+
+
+
+
 
   <!-- Footer -->
   <div id="footer"></div>
@@ -283,6 +668,57 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
   <!-- Custom JS -->
+   <!-- 13th section JS -->
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const circles = document.querySelectorAll(".circle");
+
+  circles.forEach(circle => {
+    let percentage = circle.getAttribute("data-percentage");
+    let progressPath = circle.querySelector(".circle-progress");
+
+    // Stroke dash offset calculation
+    let offset = 100 - percentage;
+    progressPath.style.strokeDashoffset = offset;
+  });
+});
+    </script>
+    <!--  -->
+ <script>
+        const details = {
+            invest: {
+                title: "Invest - Build Aggressively",
+                content: "Maximum investment in emerging technology. Establish Centers of Excellence, hire top talent, and build strategic capabilities. Focus on gaining competitive advantage through early adoption."
+            },
+            maintain: {
+                title: "Maintain - Support Strategically", 
+                content: "Continue current initiatives with selective investments. Optimize existing processes and maintain competitive position. Balanced approach to resource allocation."
+            },
+            monitor: {
+                title: "Monitor - Watch Carefully",
+                content: "Limited new investments. Run small-scale pilots, monitor competitors, and prepare transition strategies. Stay informed about market trends and emerging alternatives."
+            },
+            migrate: {
+                title: "Migrate - Actively Phase Out",
+                content: "Stop new investments in legacy technology. Focus on reskilling staff and developing migration roadmaps. Plan smooth transition to newer technologies within 12-18 months."
+            },
+            obsolete: {
+                title: "Obsolete - Exit Immediately", 
+                content: "Immediately sunset programs and reallocate resources. Complete final migrations, archive critical data, and redirect investments to strategic initiatives."
+            }
+        };
+
+        function showDetails(stage) {
+            const detailsDiv = document.getElementById('details');
+            const titleDiv = document.getElementById('details-title');
+            const contentDiv = document.getElementById('details-content');
+            
+            titleDiv.textContent = details[stage].title;
+            contentDiv.textContent = details[stage].content;
+            detailsDiv.className = 'details show';
+        }
+    </script>
+<!--  -->
   <script>
     // Get all tabs and content items
     const tabs = document.querySelectorAll(".tab");

@@ -451,11 +451,7 @@ height: 47px;
             margin: 0 auto;
         }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 40px;
-        }
+       
 
         .lifecycle {
             display: flex;
@@ -866,7 +862,123 @@ height: 47px;
   line-height: 26px;
   font-weight: 400;
 }
+
 /* 10th section */
+.investment-section {
+  background-color: #324559; 
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.investment-section .investment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Content */
+.investment-section .content-left {
+  flex: 1;
+}
+
+.investment-section .section-title {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.investment-section .content-left p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.investment-section .content-left strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Right Analysis Card */
+.investment-section .content-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.investment-section .analysis-card {
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  margin-top: 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+.investment-section .analysis-card h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+}
+
+.investment-section .analysis-item {
+  background: #F6F6F6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center; 
+  gap: 8px;
+}
+
+.investment-section .analysis-item strong {
+  color: #000;
+  flex-shrink: 0;
+}
+
+.investment-section .analysis-item p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  
+}
+
+.investment-section .negative {
+  color: #FF9C57; /* red */
+  font-weight: 500;
+  
+}
+
+.investment-section .positive {
+  color: #5DFF4D; /* green */
+  font-weight: 500;
+}
+
+/* Make SVG icons align with text */
+.investment-section .analysis-item .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit; /* now icon follows parent text color */
+}
+
+.investment-section .analysis-item svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* 11th section */
 
 .difference-section {
   padding: 60px 20px;
@@ -982,219 +1094,12 @@ height: 47px;
   margin-top: 5px;
 }
 
-/* 11th section */
-.investment-section {
-  background-color: #324559; 
-  padding: 60px 20px;
-  color: #fff;
-}
 
-.investment-section .investment-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-/* Left Content */
-.investment-section .content-left {
-  flex: 1;
-}
 
-.investment-section .section-title {
-  font-size: 38px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  line-height: 47px;
-  color: #ffffff;
-}
-
-.investment-section .content-left p {
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #ffffff;
-}
-
-.investment-section .content-left strong {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-/* Right Analysis Card */
-.investment-section .content-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.investment-section .analysis-card {
-  background: #fff;
-  color: #333;
-  padding: 25px;
-  margin-top: 60px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  width: 100%;
-  max-width: 400px;
-}
-
-.investment-section .analysis-card h3 {
-  font-size: 20px;
-  margin-bottom: 24px;
-  font-weight: 600;
-  text-align: center;
-  color: #000000;
-}
-
-.investment-section .analysis-item {
-  background: #F6F6F6;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  display: flex;
-  align-items: center; 
-  gap: 8px;
-}
-
-.investment-section .analysis-item strong {
-  color: #000;
-  flex-shrink: 0;
-}
-
-.investment-section .analysis-item p {
-  margin: 5px 0 0;
-  font-size: 16px;
-  
-}
-
-.investment-section .negative {
-  color: #FF9C57; /* red */
-  font-weight: 500;
-  
-}
-
-.investment-section .positive {
-  color: #5DFF4D; /* green */
-  font-weight: 500;
-}
-
-/* Make SVG icons align with text */
-.investment-section .analysis-item .icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit; /* now icon follows parent text color */
-}
-
-.investment-section .analysis-item svg {
-  width: 18px;
-  height: 18px;
-}
 
 
 /* 12th section */
-.skill-decision-section {
-  padding: 60px 80px;
-  max-width: 100%;
-  margin-top: 20px;
-  
-  background-color: #223140;
-  color: #ffffff;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-header h2 {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 47px;
-  color: #ffffff;
-}
-
-.section-header p {
-  margin-top: 10px;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-.option-group {
-  margin-top: 40px;
-}
-
-.option-group h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  line-height: 47px;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  width: 390px;
-  
-  background: #314457;
-  border: 1px solid #94a3b8;
-  border-radius: 14px;
-  flex: 1 1 calc(33.333% - 20px);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  border-color: #38bdf8;
-  transform: translateY(-5px);
-}
-
-.card-icon img {
-  width: 35px;
-  height: 35px;
-  margin-right: 15px;
-  
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-content h4 {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #ffffff;
-}
-
-.card-content p {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.card-arrow img {
-  width: 20px;
-  height: 20px;
-}
-
-/* 13th section */
 .transparency-section {
   text-align: left;
   padding: 60px 98px;
@@ -1273,7 +1178,7 @@ svg {
 
 .circle-progress {
   fill: none;
-  stroke: #0074d9;
+  stroke: #0070C0;
   stroke-width: 2.5;
   stroke-dasharray: 100, 100;
   stroke-dashoffset: 100;
@@ -1287,5 +1192,118 @@ svg {
   transform: translate(-50%, -50%);
   font-size: 18px;
   font-weight: bold;
-  color: #0074d9;
+  color: #0070C0;
+}
+
+
+/* 13th section */
+/* 13th section */
+.skill-decision-section {
+  padding: 60px 80px;
+  max-width: 100%;
+  margin-top: 20px;
+  background-color: #223140;
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.section-header p {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.option-group {
+  margin-top: 40px;
+}
+
+.option-group h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 47px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card styling */
+.card {
+  width: 390px;
+  background: #314457;
+  border: 1px solid #94a3b8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;   /* centers everything vertically */
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #38bdf8;
+  transform: translateY(-5px);
+}
+
+/* Icon left */
+.card-icon {
+  flex-shrink: 0;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Middle text */
+.card-content {
+  flex: 1;
+}
+
+.card-content h4 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* Right arrow */
+.card-arrow {
+  flex-shrink: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;  /* centers arrow vertically */
+  justify-content: center;
+}
+
+.card-arrow img {
+  width: 24px;   /* increased size */
+  height: 24px;
 }

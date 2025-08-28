@@ -8,8 +8,8 @@
 html {
   scroll-behavior: smooth;
 }
+
 /* 1st Section  */
-/* Container */
 .hero-container {
   max-width: 1440px;
   height: 549px;
@@ -17,7 +17,6 @@ html {
   padding-top: 71px;
 }
 
-/* Hero Section Background */
 .hero-section {
   position: relative;
   /* min-height: 90vh; */
@@ -30,7 +29,6 @@ html {
     linear-gradient(180deg, #ffffff, #eef3f9 40%, #eaf0f7);
 }
 
-/* Sub Title (Top Small Line) */
 .hero-subtitle {
   width: 709px;
   font-size: 16px;
@@ -40,10 +38,9 @@ html {
   margin-bottom: 1rem;
 }
 
-/* Main Title */
 .hero-title {
-    width: 709px;
-    line-height: 64px;
+  width: 709px;
+  line-height: 64px;
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -53,10 +50,8 @@ html {
   white-space: nowrap;
 }
 
-/* Question Section */
 .hero-question {
-    
-    color: #525252;
+  color: #525252;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
@@ -71,8 +66,6 @@ html {
   line-height: 28px;
 }
 
-
-/* Supporting Description */
 .hero-description {
   width: 709px;
   font-size: 16px;
@@ -83,7 +76,6 @@ html {
 
 }
 
-/* Button */
 .hero-button {
   display: inline-flex;
   align-items: center;
@@ -112,13 +104,11 @@ html {
   text-align: center;
 }
 
-/* Container for content */
 .framework-container {
     width: 619px;
     margin: 0 auto;
 }
 
-/* Heading styles */
 .framework-heading {
   font-size: 36px;
   font-weight: 600;
@@ -127,14 +117,12 @@ html {
   color: #121212;
 }
 
-/* Blue highlighted text */
 .framework-highlight {
   display: block;
   color: #0070C0; /* Blue like in your image */
   margin-top: 8px;
 }
 
-/* Description text */
 .framework-description {
   font-size: 16px;
   font-weight: 400;
@@ -423,9 +411,8 @@ html {
 .organizational-strategy {
   text-align: center;
   width: 415px;
-height: 47px;
+  height: 47px;
   margin: 40px auto;
-  
 }
 
 .organizational-strategy h3 {
@@ -442,6 +429,7 @@ height: 47px;
   line-height: 26px;
   font-weight: 400;
 }
+
 /* 8th ssection */
   .container {
             background: white;
@@ -914,13 +902,13 @@ height: 47px;
 
 .investment-section .analysis-card {
   background: #fff;
-  color: #333;
+  color: #000000;
   padding: 25px;
   margin-top: 60px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   width: 100%;
-  max-width: 400px;
+  max-width: 449px;
 }
 
 .investment-section .analysis-card h3 {
@@ -933,7 +921,7 @@ height: 47px;
 
 .investment-section .analysis-item {
   background: #F6F6F6;
-  border-radius: 8px;
+  border-radius: 7px;
   padding: 15px;
   margin-bottom: 15px;
   font-size: 16px;
@@ -949,37 +937,37 @@ height: 47px;
 
 .investment-section .analysis-item p {
   margin: 5px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   
 }
 
 .investment-section .negative {
   color: #FF9C57; /* red */
   font-weight: 500;
-  
+  line-height:26px;
 }
 
 .investment-section .positive {
-  color: #5DFF4D; /* green */
+  color: #5DFF4D;
   font-weight: 500;
+  line-height:26px;
 }
 
-/* Make SVG icons align with text */
+
 .investment-section .analysis-item .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: inherit; /* now icon follows parent text color */
+  color: inherit; 
 }
 
 .investment-section .analysis-item svg {
-  width: 18px;
-  height: 18px;
+  width: 17.25px;
+  height: 17.25px;
 }
 
 
 /* 11th section */
-
 .difference-section {
   padding: 60px 20px;
   text-align: center;
@@ -1004,7 +992,7 @@ height: 47px;
   margin-bottom: 30px;
 }
 
-/* Comparison Box */
+
 .comparison-box {
   background: #F6F6F6;
   border-radius: 14px;
@@ -1019,8 +1007,8 @@ height: 47px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px; /* space between left & right columns 
-  */
+  gap: 40px;
+
 }
 
 .column {
@@ -1029,9 +1017,9 @@ height: 47px;
 }
 
 .column h3 {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 26px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -1043,8 +1031,8 @@ height: 47px;
 
 .column li {
   margin-bottom: 25px; 
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 400;
   color: #525252;
 }
@@ -1053,9 +1041,8 @@ height: 47px;
   margin-bottom: 0;
 }
 
-/* Extra spacing only for left column to balance height */
 .generic li {
-  margin-bottom: 60px; /* more gap to match right side */
+  margin-bottom: 60px; 
 }
 
 .generic li:last-child {
@@ -1080,22 +1067,19 @@ height: 47px;
 .invest,
 .transition,
 .build {
+  font-size: 20px;
   color: #007A9F;
   font-weight: 700;
 }
 
-/* Footer Note inside box */
 .footer-note {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #525252;
   font-weight: 500;
   line-height: 26px;
   margin-top: 5px;
 }
-
-
-
 
 
 
@@ -1114,7 +1098,7 @@ height: 47px;
 }
 
 .transparency-header p {
-    font-size: 16px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 400;
   color: #525252;
@@ -1132,14 +1116,10 @@ height: 47px;
   /* max-width: 280px; */
   text-align: center;
   width: 371px;
-height: 320px;
-
-
-  
+  height: 320px;  
 }
 
 .transparency-card h3 {
- 
   margin-top: 15px;
   font-size: 20px;
   font-weight: 600;
@@ -1148,7 +1128,6 @@ height: 320px;
 }
 
 .transparency-card p {
-
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1156,11 +1135,10 @@ height: 320px;
   margin-top: 8px;
 }
 
-/* Circle Styles */
 .circle {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 212px;
+  height: 212px;
   margin: 0 auto 15px;
 }
 
@@ -1172,7 +1150,7 @@ svg {
 
 .circle-bg {
   fill: none;
-  stroke: #ddd;
+  stroke: #C4C4C4;
   stroke-width: 2.5;
 }
 
@@ -1190,16 +1168,17 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
   color: #0070C0;
 }
 
 
-/* 13th section */
+
 /* 13th section */
 .skill-decision-section {
-  padding: 60px 80px;
+  padding: 60px 130px;
   max-width: 100%;
   margin-top: 20px;
   background-color: #223140;
@@ -1215,12 +1194,10 @@ svg {
   font-size: 36px;
   font-weight: 600;
   line-height: 47px;
-  color: #ffffff;
 }
 
 .section-header p {
   margin-top: 10px;
-  color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -1235,23 +1212,22 @@ svg {
   margin-bottom: 20px;
   line-height: 47px;
   font-weight: 600;
-  color: rgb(255, 255, 255);
+  
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 43px;
 }
 
-/* Card styling */
 .card {
   width: 390px;
   background: #314457;
-  border: 1px solid #94a3b8;
+  border: 1px solid #ffffff;
   border-radius: 14px;
   display: flex;
-  align-items: center;   /* centers everything vertically */
+  /* align-items: center;   */
   padding: 20px;
   transition: 0.3s;
 }
@@ -1261,20 +1237,19 @@ svg {
   transform: translateY(-5px);
 }
 
-/* Icon left */
 .card-icon {
   flex-shrink: 0;
-  margin-right: 15px;
+  margin-left: 26px;
   display: flex;
-  align-items: center;
+  
 }
 
 .card-icon img {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 20px;
 }
 
-/* Middle text */
 .card-content {
   flex: 1;
 }
@@ -1283,15 +1258,17 @@ svg {
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
+  margin-left: 26px;
   margin-bottom: 5px;
   color: #ffffff;
 }
 
 .card-content p {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   font-weight: 400;
   color: #ffffff;
+   margin-left: 26px;
 }
 
 /* Right arrow */
@@ -1299,11 +1276,10 @@ svg {
   flex-shrink: 0;
   margin-left: auto;
   display: flex;
-  align-items: center;  /* centers arrow vertically */
-  justify-content: center;
+  justify-content: end;
 }
 
 .card-arrow img {
-  width: 24px;   /* increased size */
-  height: 24px;
+  width: 38px;   
+  height: 38px;
 }
